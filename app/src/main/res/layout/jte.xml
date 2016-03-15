@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical"
+	android:gravity="center">
+
+	<TextView
+		android:layout_height="wrap_content"
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:layout_width="wrap_content"
+		android:text="Ready?"
+		android:scaleX="2.0"
+		android:scaleY="2.0"
+		android:id="@+id/maintext"/>
+
+	<TextView
+		android:layout_height="wrap_content"
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:layout_width="wrap_content"/>
+
+	<ToggleButton
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:textOn="進める"
+		android:textOff="止める"
+		android:checked="true"
+		android:id="@+id/onoffbutton"/>
+
+	<Button
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:text="次へ"
+		android:onClick="after"/>
+
+	<Button
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:text="前へ"
+		android:onClick="before"/>
+
+	<Button
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:text="1つ次へ"
+		android:onClick="dafter"/>
+
+	<Button
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:text="1つ前へ"
+		android:onClick="dbefore"/>
+
+	<Button
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:text="辞書"
+		android:onClick="dictionary"/>
+
+	<Button
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:text="戻る"
+		android:onClick="tomain"/>
+
+</LinearLayout>
+
