@@ -15,7 +15,7 @@ public class JtEActivity extends Activity{
 	private int op = 0;
 	private int direction = 0;
 	private Random rnd = new Random();
-	private Words words = new Words();
+	private Words words;
 
 	
 	private CountDownTimer cdt = new CountDownTimer(2000,1000){
@@ -53,6 +53,7 @@ public class JtEActivity extends Activity{
 	{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.jte);
+		words = new Words(this);
 		countdown();
 		TextView text = (TextView) findViewById(R.id.maintext);
 		text.setText(words.getWord(num,op));
@@ -62,9 +63,9 @@ public class JtEActivity extends Activity{
 			public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 				// トグルON
 				if (isChecked) {
-					countdown();
+					stopcountdown();
 				} else {
-					stopcountdown(); // タイマーをストップ
+					countdown();
 				}
 			}
 		});

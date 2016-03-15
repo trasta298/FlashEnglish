@@ -25,7 +25,7 @@
 		android:layout_width="match_parent"
 		android:textOn="進める"
 		android:textOff="止める"
-		android:checked="true"
+		android:checked="false"
 		android:id="@+id/onoffbutton"/>
 
 	<Button
