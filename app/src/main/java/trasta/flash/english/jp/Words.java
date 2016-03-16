@@ -19,9 +19,9 @@ public class Words{
 			BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(sdPath + fileName), "utf-8"));
 			String str;
 			while((str = reader.readLine()) != null){
-				if(str == "") continue;
+				if(str.indexOf("_")==-1) continue;
 				String[] temp = str.split("_",0);
-				this.words.add(temp.clone());
+				this.words.add(temp);
 			}
 			reader.close();
 		}catch(FileNotFoundException e){
@@ -39,7 +39,7 @@ public class Words{
 		}
 	}
 
-	public ArrayList getWords(){
+	public ArrayList<String[]> getWords(){
 		return this.words;
 	}
 
